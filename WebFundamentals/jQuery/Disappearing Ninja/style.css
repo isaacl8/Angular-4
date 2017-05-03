@@ -1,0 +1,28 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#wrapper{
+width: 100vw;
+padding: 10px;
+text-align: center;
+}
+h1{
+  font-size: 30px;
+  text-align: center;
+}
+#pictures{
+  margin: auto;
+  position: relative;
+}
+img{
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+button{
+  height: 20px;
+  width: auto;
+  font-size: 15px;
+}

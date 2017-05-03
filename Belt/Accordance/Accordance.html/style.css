@@ -1,0 +1,31 @@
+#wrapper{
+  width: 970px;
+  padding: 5px;
+  margin: 5px;
+}
+#header{
+  display: inline-block;
+}
+#leftheader{
+border: 1px dotted red;
+margin-left: 5px;
+display: inline-block;
+width: 900px;
+}
+#leftheader li{
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+}
+#rightheader{
+  display: inline-block;
+
+}
+#navbar{
+  border: 1px dotted red;
+  margin-left: 5px;
+  display: inline-block;
+  width: 900px;
+  text-align: center;
+  display: inline-block;
+}

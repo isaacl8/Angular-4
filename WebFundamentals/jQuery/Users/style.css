@@ -1,0 +1,43 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+}
+
+#header {
+  font-size: 20px;
+  border: 2px solid black;
+  width: 550px;
+}
+
+#main {
+  width: 450px;
+  text-align: right;
+  margin-top: 15px;
+}
+
+h1 {
+  text-align: left;
+  padding-left: 2px;
+}
+
+table tr th {
+  padding-left: 15px;
+}
+
+hr {
+  width: 450px;
+}
+
+form {
+  margin-bottom: 12px;
+}
+
+input {
+  margin: 5px;
+}
+
+button {
+  padding: 2px;
+  font-size: 12px;
+}

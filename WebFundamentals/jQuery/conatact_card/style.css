@@ -1,0 +1,36 @@
+*{
+  margin: 0px;
+  padding:0px;
+
+}
+form{
+  text-align: left;
+  margin: 15px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+#first_name{
+  margin-bottom: 100px;
+}
+#last_name{
+  margin-bottom: 100px;
+}
+#description{
+  margin-bottom: 20px;
+}
+form #button{
+  text-align: right;
+  width:auto;
+}
+textarea{
+  height:100px;
+  width: 300px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+input{
+  width: 150px;
+  height: 30px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
