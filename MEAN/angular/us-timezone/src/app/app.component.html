@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Timezone</title>
+</head>
+
+<body>
+  <h1> Welcome to the Timezone! </h1>
+
+<button (click)="getDateByZone('PST')" [ngClass]="{selected: lastTimeZoneSelected === 'PST'}">PST</button>
+<button (click)="getDateByZone('MST')" [ngClass]="{selected: lastTimeZoneSelected === 'MST'}">MST</button>
+<button (click)="getDateByZone('CST')" [ngClass]="{selected: lastTimeZoneSelected === 'CST'}">CST</button>
+<button (click)="getDateByZone('EST')" [ngClass]="{selected: lastTimeZoneSelected === 'EST'}">EST</button>
+
+
+    <h1>{{time | date:'medium'}}</h1>
+
+</body>
+
+</html>

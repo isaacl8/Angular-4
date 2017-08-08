@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Registration</title>
+</head>
+
+<body>
+  <h1>Registration</h1>
+  <div class="success"  *ngIf='registered'>
+
+    <p>Thank you for registering with us
+         {{savedUser.first_name}}. We just sent you a confirmation email at {{savedUser.email}}, and we will send all mail to {{savedUser.street}} {{savedUser.city}} {{savedUser.state}}.</p>
+
+    <p>Have a wonderful day!</p>
+
+  </div>
+
+
+  <div class="account">
+
+    <form (submit)="onSubmit(); userForm.reset()" #userForm="ngForm">
+
+      <fieldset>
+        <legend>
+          <h2>Account Information</h2></legend>
+
+        <p>*First Name <input type="text" name="first_name" [(ngModel)]="user.first_name" #first_name="ngModel" required minlength="4" maxlength="24"></p>
+
+        <div *ngIf="first_name.errors && (first_name.dirty || first_name.touched)">
+          <p class="error" *ngIf="!first_name.errors.required">The first name field is required</p>
+          <p class="error" *ngIf="!first_name.errors.minlength">The first name must be at least 4 characters</p>
+        </div>
+
+        <p>*Last Name <input type="text" name="last_name" [(ngModel)]="user.last_name" #last_name="ngModel" required minlength="4" maxlength="24"></p>
+
+        <div *ngIf="last_name.errors && (last_name.dirty || last_name.touched)">
+          <p class="error" *ngIf="last_name.errors.required">The last name field is required</p>
+          <p class="error" *ngIf="!last_name.errors.minlength">The last name must be at least 4 characters</p>
+        </div>
+
+        <p>*Email <input type="text" name=" email" [(ngModel)]="user.email" #email="ngModel" required></p>
+
+        <div *ngIf="email.errors && (email.dirty || email.touched)">
+          <p class="error" *ngIf="email.errors.required">The email field is required</p>
+        </div>
+
+        <p>*Password <input type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required minlength="10" maxlength="24" pattern="^([a-zA-Z0-9@*#]{8,15})$"></p>
+
+        <div *ngIf="password.errors && (password.dirty || password.touched)">
+          <p class="error" *ngIf="password.errors.required">The password field is required</p>
+        </div>
+
+        <p>*Password Confirmation <input type="password" name="password_confirm" [(ngModel)]="user.password_confirm" #password_confirm="ngModel" required minlength="10" maxlength="24" pattern="^([a-zA-Z0-9@*#]{8,15})$"><span *ngIf="user.pw !== user.pwconf "> Password must match </span></p>
+
+        <div *ngIf="password_confirm.errors && (password_confirm.dirty || password_confirm.touched)">
+          <p class="error" *ngIf="password_confirm.errors.required">The password confirmation field is required</p>
+        </div>
+
+        <p>*Street Address <input type="text" name="street" [(ngModel)]="user.street" #street="ngModel" required></p>
+
+        <div *ngIf="street.errors && (street.dirty || street.touched)">
+          <p class="error" *ngIf="street.errors.required">The street field is required</p>
+        </div>
+
+        <p>Unit/Apt# <input type="text" name="apt" [(ngModel)]="user.apt" #apt="ngModel"></p>
+
+        <p>*City <input type="text" name="city" [(ngModel)]="user.city" #city="ngModel" required></p>
+
+        <div *ngIf="city.errors && (city.dirty || city.touched)">
+          <p class="error" *ngIf="city.errors.required">The city field is required</p>
+        </div>
+
+        <p>*State <select name='state' [(ngModel)]="user.state" #state="ngModel" required>
+  <option value="california">California</option>
+  <option value="new_york">New York</option>
+  <option value="florida">Florida</option>
+  <option value="texas">Texas</option>
+</select></p>
+
+        <div *ngIf="state.errors && (state.dirty || state.touched)">
+          <p class="error" *ngIf="state.errors.required">The state field is required</p>
+        </div>
+
+        *I'm feeling lucky <input type="radio" name="answer" [(ngModel)]="user.answer" #answer="ngModel" required value="yes">Yes
+
+        <div *ngIf="answer.errors && (answer.dirty || answer.touched)">
+          <p class="error" *ngIf="answer.errors.required">The answer field is required</p>
+        </div>
+
+        <input type="radio" name="answer" [(ngModel)]="user.answer" #answer="ngModel" value="no">No
+
+        <div *ngIf="answer.errors && (answer.dirty || answer.touched)">
+          <p class="error" *ngIf="answer.errors.required">The answer field is required</p>
+        </div>
+
+        <p><input type="submit" name="register" value="Register" [disabled]="!userForm.valid"></p>
+
+      </fieldset>
+    </form>
+
+  </div>
+</body>
+
+</html>

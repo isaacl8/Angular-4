@@ -1,0 +1,25 @@
+<div class="container">
+  <fieldset>
+    <legend>PowerComponent</legend>
+    <form (submit)="onSubmit($request)">
+      <h1>Initial Power Level:
+                <input type="number" min='1'max='100' name="p_level"  [(ngModel)]="p_level" #level="ngModel">
+                <input type="submit" value="Calculate Powers"></h1>
+    </form>
+
+
+    <app-human [p_level]='p_level'></app-human>
+
+    <app-saiyan [p_level]='p_level'></app-saiyan>
+
+    <app-supersaiyan [p_level]='p_level'></app-supersaiyan>
+
+    <app-supersaiyantwo [p_level]='p_level'></app-supersaiyantwo>
+
+    <app-supersaiyanthree [p_level]='p_level'></app-supersaiyanthree>
+
+      <app-supersaiyanfour [p_level]='p_level'></app-supersaiyanfour>
+
+
+  </fieldset>
+</div>

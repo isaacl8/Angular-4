@@ -1,0 +1,17 @@
+<h3>Edit Product</h3>
+<form (submit)="update()" #formData="ngForm">
+    <!-- (submit)+"update()" is a event listener also with a method of update, which is in the ts. -->
+    <!-- formData="ngForm" is put if cause it is a form -->
+  <div class="inputs" *ngIf="product">
+    <label for="">Title:</label>
+    <input type="text" name="title" [(ngModel)]="product.title">
+    <!-- [(ngModel)] = "product.____" is creating two way databinding; product is being called from the ts. -->
+    <label for="">Price:</label>
+    <input type="number" name="price" [(ngModel)]="product.price">
+    <!-- [(ngModel)] = "product.____" is creating two way databinding; product is being called from the ts. -->
+    <label for="">Image Url:</label>
+    <input type="text" name="imgUrl" [(ngModel)]="product.imgUrl">
+    <!-- [(ngModel)] = "product.____" is creating two way databinding; product is being called from the ts. -->
+    <input class='submit' type="submit" value="UPDATE">
+  </div>
+</form>

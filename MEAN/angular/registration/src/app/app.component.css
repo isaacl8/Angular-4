@@ -1,0 +1,10 @@
+ input.ng-invalid.ng-touched{
+     background: #f81c1c ;
+ }
+.error{
+    color: #f81c1c;
+}
+
+.success{
+    color: green;
+}

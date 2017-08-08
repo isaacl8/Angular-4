@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>PPM - Project Product Management</h1>
+  <nav>
+    <ul>
+      <li><a [routerLink]="['/']" >Home</a></li>
+      <!-- [routerLink]="['/']": treat this as a regualar href link in  html(href="") -->
+      <li>|</li>
+      <li><a [routerLink]="['/products']" >Product List</a></li>
+      <!-- [routerLink]="['/']": treat this as a regualar href link in  html(href="") -->
+      <li>|</li>
+      <li><a [routerLink]="['/products/new']" >Product Creation</a></li>
+      <!-- [routerLink]="['/']": treat this as a regualar href link in  html(href="") -->
+    </ul>
+  </nav>
+  <router-outlet></router-outlet> <!-- needs to be done to the most root level component we want to start routing from. Can place in app.component.html file, but we could place it in a sub-component of the app-component. want this to be high in component architecture cause all routing will start from this point, and all sub-routing will occurring within the components that load in the <router-outlet></router-outlet>. -->
+</div>
